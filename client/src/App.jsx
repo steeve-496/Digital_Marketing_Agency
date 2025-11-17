@@ -4,10 +4,9 @@ import Header from './components/pages/header/header.jsx';
 import Hero from './components/pages/hero/hero.jsx';
 import Features from './components/pages/features/features.jsx';
 import Footer from './components/pages/footer/footer.jsx';
-import HorizontalScroll from "./components/horizontalscroll.jsx";
+import About from "./components/pages/about/about.jsx";
 
 import Lenis from "@studio-freight/lenis";
-import { gsap } from "gsap";
 
 export default function App() {
   const [preloaderDone, setPreloaderDone] = useState(false);
@@ -37,7 +36,8 @@ export default function App() {
       {!preloaderDone && <Preloader onFinish={() => setPreloaderDone(true)} />}
       <Header animate={preloaderDone} />
       <Hero animate={preloaderDone} />
-      <HorizontalScroll animate={preloaderDone} />
+      <About animate={preloaderDone} />
+      <Features animate={preloaderDone} />
       <Footer />
     </>
   );

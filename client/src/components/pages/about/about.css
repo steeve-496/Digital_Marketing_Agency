@@ -11,6 +11,11 @@
   src: url('../../../fonts/mooxy.ttf') format("truetype");
 }
 
+
+body{
+  background-color: black;
+
+}
 .about-text{
   font-size: 2em;
   height: 100vh;
