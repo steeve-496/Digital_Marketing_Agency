@@ -1,53 +1,54 @@
 import React, { useRef, useLayoutEffect } from "react";
 import "./about.css";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // <-- Make sure ScrollTrigger is imported
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function About({ scrollTween }) {
   const aboutRef = useRef(null);
 
   useLayoutEffect(() => {
+    
     const ctx = gsap.context(() => {
       
-      // *** THE FIX ***
-      // We also delay this to make sure the parent's
-      // delayedCall has finished and created the ID.
-      gsap.delayedCall(0, () => {
-        // 1. Use ScrollTrigger.getById()
-        const horizontalScrollTrigger = ScrollTrigger.getById("horizontal-scroll");
+      const elementsToAnimate = aboutRef.current.querySelectorAll(".about-title, .about-desc, .card");
 
-        if (horizontalScrollTrigger) {
-          
-          // 2. Get the .animation (the tween) from the trigger
-          const horizontalTween = horizontalScrollTrigger.animation; 
-
-          gsap.from(
-            aboutRef.current.querySelectorAll(".about-title, .about-desc, .card"),
-            {
-              scrollTrigger: {
-                trigger: aboutRef.current,
-                containerAnimation: horizontalTween, // <-- Pass the animation here
-                start: "left 75%",
-                // markers: true, // <-- Uncomment this to see debug markers
-              },
-              y: 50,
-              opacity: 0,
-              duration: 0.8,
-              stagger: 0.2,
-              ease: "power3.out",
-            }
-          );
-        } else {
-          console.warn("About: Could not find ScrollTrigger with id 'horizontal-scroll'");
-        }
-      });
+      // *** THIS IS THE FIX ***
+      // Check if the parent scroll animation exists
+      if (scrollTween) {
+        // More than 1 panel: Use the horizontal scroll
+        gsap.from(elementsToAnimate, {
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            containerAnimation: scrollTween, 
+            start: "left 75%",
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        });
+      } else {
+        // Only 1 panel: Use a normal vertical scroll
+        gsap.from(elementsToAnimate, {
+          scrollTrigger: {
+            trigger: aboutRef.current,
+            start: "top 80%", // Original vertical trigger
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+        });
+      }
     }, aboutRef); 
 
     return () => ctx.revert();
     
-  }, []);
+  }, [scrollTween]); // Dependency array is still correct
 
   return (
     <section className="about panel" ref={aboutRef} id="about">
