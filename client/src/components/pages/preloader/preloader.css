@@ -1,0 +1,46 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap');
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.preloader-wrapper {
+    position: fixed;
+    background-color: black;
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 999;
+    transition: opacity 1s ease;
+}
+
+.preloader-wrapper.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.pre-title {
+    display: flex;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw;
+    font-family: 'Satoshi', sans-serif;
+    justify-content: center;
+    color: white;
+}
+
+.pre-title h1 {
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.pre-title span {
+    font-size: 1em;
+    font-weight: 900;
+    overflow:hidden;
+    margin-top: 5px;
+    border-radius: 10px;
+    color: rgb(173, 164, 0);
+    text-shadow: 0 0 20px rgba(112, 112, 112, 0.377);
+}
