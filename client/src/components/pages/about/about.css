@@ -18,6 +18,7 @@ body{
 }
 
 .about{
+  margin-top:4%;
   display: flex;
   height: 100vh;
   color: white;
@@ -28,9 +29,8 @@ body{
   font-size: 6em;
   width: 70%;
   text-align:left;
-  background-color: black;
   padding:1px 2px;
-  border-radius: 10px;
+  transition: all 500ms ease-in-out;
 }
 
 .about-text{
@@ -46,8 +46,6 @@ body{
   font-size:2em;
   text-align: left;
   width: 60%;
-  border-radius: 20px;
-  background-color: black; /*For overllaping image*/
 }
 
 .about-img{
@@ -58,6 +56,16 @@ body{
   border-radius: 20px;
 }
 
+.about-title:hover{
+  font-size: 6.5em;
+  transition: all 0.2s ease-in-out;
+  color: antiquewhite;
+}
+
+.about-desc:hover{
+  transition: all 0.2s ease-in-out;
+  color: rgb(126, 126, 126);
+}
 
 
 
