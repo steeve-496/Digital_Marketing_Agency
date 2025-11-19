@@ -16,29 +16,54 @@ body{
   background-color: black;
 
 }
-.about-text{
-  font-size: 2em;
-  height: 100vh;
+
+.about{
   display: flex;
-  flex-direction: column;
+  height: 100vh;
   color: white;
-  align-items: center;
 }
 
 .about-title{
   font-family: 'Agile',sans-serif;
-  font-size: 2em;
+  font-size: 6em;
+  width: 70%;
+  text-align:left;
+  background-color: black;
+  padding:1px 2px;
+  border-radius: 10px;
 }
 
+.about-text{
+  margin-left:90px;
+  width: 70%;
+  height: 100%;
+  z-index:1;
+}
+ 
 
 .about-desc{
   font-family: 'Mooxy',sans-serif;
-  font-size:1em;
-  text-align: center;
-  width: 80%;
+  font-size:2em;
+  text-align: left;
+  width: 60%;
+  border-radius: 20px;
+  background-color: black; /*For overllaping image*/
 }
 
-.cards{
+.about-img{
+  width: 40%;
+  right: 4%;
+  margin-top:80px;
+  position: absolute;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+/* .cards{
   display: flex;
   text-align: center;
   gap: 0px 90px;
@@ -55,6 +80,6 @@ body{
   font-weight:300;
   font-size: 2em;
   margin: 0;
-}
+} */
 
 
