@@ -65,7 +65,6 @@ function About(){
           start:'top 50%',
           end: "top 50%",
           duration:5,
-          markers:1,
           scrub:true,
           ease: 'power1.in'
         }
@@ -88,7 +87,6 @@ function About(){
           delay:1,
           duration:4,
           stagger: 0.1,
-          markers:1,
           scrub:true,
           ease: 'power1.in'
         }
@@ -108,7 +106,7 @@ function About(){
               text="We are creative developers that transforms innovative ideas into powerful digital experiences. Out team combines artistic vision with technical expertise to deliver solutions that captivate and convert"
               animateOn="view"
               revealDirection="start"
-              speed={40}
+              speed={30}
               maxIterations={6}
           />
           </div>

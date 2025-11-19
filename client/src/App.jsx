@@ -33,7 +33,8 @@ export default function App() {
 
   return (
     <>
-      {!preloaderDone && <Preloader onFinish={() => setPreloaderDone(true)} />}
+      
+      {/* {!preloaderDone && <Preloader onFinish={() => setPreloaderDone(true)} />} */}
       <Header animate={preloaderDone} />
       <Hero animate={preloaderDone} />
       <About animate={preloaderDone} />
