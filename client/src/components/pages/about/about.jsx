@@ -3,9 +3,8 @@ import { useRef } from "react";
 import {gsap} from "gsap";
 import { useGSAP } from '@gsap/react';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import TextType from "../effects/texttype.jsx";
 gsap.registerPlugin(ScrollTrigger);
-
-import DecryptedText from '../effects/decryptedText.jsx';
 
 function About(){
 
@@ -101,14 +100,13 @@ function About(){
         <div className="about-text">
           <h2 className="about-title">ABOUT <br /> SYSDEVCODE</h2>  
           <div style={{ marginTop: '4rem' }} className="about-desc">
-
-          <DecryptedText  className="about-desc-span"
-              text="We are creative developers that transforms innovative ideas into powerful digital experiences. Out team combines artistic vision with technical expertise to deliver solutions that captivate and convert"
-              animateOn="view"
-              revealDirection="start"
-              speed={30}
-              maxIterations={6}
-          />
+            <TextType 
+              text={"We are creative developers that transforms innovative ideas into powerful digital experiences. Out team combines artistic vision with technical expertise to deliver solutions that captivate and convert."}
+              typingSpeed={50}
+              pauseDuration={30000}
+              showCursor={true}
+              cursorCharacter="|"
+            />
           </div>
         </div>        
           <img ref={aboutRef} src="/about-img.png" alt="about-img" className="about-img" />

@@ -1,43 +1,75 @@
-.services {
-  padding: 6rem 10%;
-  background: #0c0c18;
+@import url("https://api.fontshare.com/v2/css?f[]=ranade@300,500&display=swap");
+
+@font-face{
+  font-family: 'Agile';
+  src: url('../../../fonts/agile.ttf') format("truetype");
+}
+
+
+@font-face{
+  font-family: 'Mooxy';
+  src: url('../../../fonts/mooxy.ttf') format("truetype");
+}
+
+.services{
+  position: relative;
+  height:auto;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1%;
   color: white;
-  text-align: center;
+  transition: 500ms ease-in-out;
 }
 
-.services h2 {
-  font-size: 2.4rem;
-  margin-bottom: 3rem;
-  text-shadow: 0 0 15px rgba(255, 94, 223, 0.4);
+.services-title{
+  font-size:7em;
+  font-family: "Mooxy", sans-serif;
+  letter-spacing: 10px;
+  color:rgba(245, 245, 245, 0.697);
+  margin-right: 40%;
+
 }
 
-.service-container {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.service-card-container{
+  width: 90%;
+  padding-bottom: 7%;
+  margin: 0;
 }
 
-.service-box {
-  padding: 2.2rem;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 15px;
-  transition: 0.4s;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  cursor: pointer;
+.service-cards{
+  display: flex;
+  align-items:center;
+  gap:7%;
+  margin: 0;
+  padding: 2em 3%;
+  border-top:1px solid rgba(255, 255, 255, 0.467);
+  border-bottom : 1px solid rgba(255, 255, 255, 0.467);
+  justify-content: center;
+  transition: 300ms ease-in-out;
 }
 
-.service-box:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 30px rgba(4, 192, 255, 0.3);
+#service-title{
+  font-size:3em;
+  width: 30%;
+  font-family: 'Ranade', sans-serif;
 }
 
-.service-box h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px rgba(255, 94, 223, 0.4);
+#service-desc,#service-index{
+  font-size:1.3em;
+  font-family: 'Ranade', sans-serif;
+  font-weight: 300;
 }
 
-.service-box p {
-  color: #cdcde1;
+#service-desc{
+  width: 50%;
+  text-align:justify;
+}
+
+/* Hover */
+
+.service-cards:hover{
+  color:black;
+  background-color: white;
+  border-radius: 20px;
 }

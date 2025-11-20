@@ -16,11 +16,12 @@
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.13.0",
     "hook": "^0.1.0",
+    "maath": "^0.10.8",
     "motion": "^12.23.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
-    "three": "^0.181.1"
+    "three": "^0.181.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
