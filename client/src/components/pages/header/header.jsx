@@ -17,7 +17,7 @@ export default function Header({ animate }) {
   };
 
   useEffect(() => {
-    if (!animate) return; // WAIT for preloader to finish
+    if (!animate) return;
 
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -54,7 +54,7 @@ export default function Header({ animate }) {
         <li><a ref={addLink} href="#hero">Home</a></li>
         <li><a ref={addLink} href="#services">Services</a></li>
         <li><a ref={addLink} href="#about">About</a></li>
-        <li><a ref={addLink} href="#footer">Contact</a></li>
+        <li><a ref={addLink} href="#contact">Contact</a></li>
       </ul>
     </header>
   );

@@ -42,11 +42,11 @@ export default function services() {
         scrollTrigger:{
           trigger:card,
           start : 'bottom bottom',
-          end : 'top 80%',
+          end : 'top 90%',
           scrub:true,
           duration: 200,
           ease: 'power1.in',
-          markers:true,
+          // markers:true,
         }
       }
     )

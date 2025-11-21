@@ -1,0 +1,63 @@
+@import url("https://api.fontshare.com/v2/css?f[]=bebas-neue@400&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=ranade@300,400,500&display=swap");
+
+body{
+    --framer-aspect-ratio-supported: auto;
+}
+#feature{
+    color: white;
+}
+
+#feature-title{
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0;
+    margin-left: 2%;
+    margin-bottom: 0 !important;
+    font-size: 9em;
+    color: rgba(255, 255, 255, 0.378);
+    width: 70%;
+    transition: 400ms ease-in-out;
+}
+
+#video-feature{
+    margin-top:16%;
+    cursor: auto; 
+    width: 20%; 
+    height: 100%; 
+    border-radius: 0px; 
+    display: block; 
+    object-fit: fill; 
+    background-color: rgba(0, 0, 0, 0); 
+    object-position: 50% 50%;
+}
+
+.feature-container{
+    display: flex;
+}
+
+.feature-list{
+    display: flex;
+    gap:5%;
+    margin-bottom: 5%;
+}
+
+#list1 li, #list2 li{
+    font-size:1.4em;
+    font-family: 'Ranade', sans-serif;
+    font-weight: 400;
+    margin-bottom: 5%;
+    padding-left: 10px;
+    text-decoration: none;
+    list-style-type: none;
+    width: 110%;
+    transition: 300ms ease-in-out;
+}
+
+#list1 li:hover , #list2 li:hover{
+    color:rgba(245, 245, 245, 0.60);
+
+}
+
+#feature-title:hover{
+    color: rgba(255, 255, 255, 0.5);
+}

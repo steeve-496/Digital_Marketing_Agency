@@ -25,7 +25,7 @@ export default function Footer() {
           <i className="fa-brands fa-instagram"></i>
           <i className="fa-brands fa-twitter"></i>
           <i className="fa-brands fa-linkedin"></i>
-        <p>© 2024 Digimax. All rights reserved.</p>
+        <p> {new Date().getFullYear()}© SysDevCode. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.navbar_s {
+  z-index: 9999;
+  position: fixed;
+  height: auto;
+  width: 90%;
+  padding: 1.9rem 6%;
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg,rgba(0, 0, 0, 0.626), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(3px);
+}
+
+.logo_s {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffffff, #abababe3,white);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.nav-links_s {
+  display: flex;
+  gap: 3rem;
+  right: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links_s li a {
+  font-size:1.2em;
+  text-decoration: none;
+  color: #c5c5c5; /* This light color is now visible on the dark bg */
+  font-weight: 500;
+  transition: 0.4s;
+}
+
+.nav-links_s li a:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background-color: white;
+  padding: 0.7em 20%;
+}
+
+.nav-links_s li a::after{
+  color: rgb(0, 0, 0);
+  background-color: white;
+  padding: 0.7em 20%;
+}
