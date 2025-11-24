@@ -6,7 +6,7 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import TextType from "../effects/texttype.jsx";
 gsap.registerPlugin(ScrollTrigger);
 
-function About(){
+function About({aboutTitle ,aboutDesc}){
 
   const aboutRef= useRef();
 
@@ -98,10 +98,10 @@ function About(){
     <section className="about-section" id="about">
       <div className="about">
         <div className="about-text">
-          <h2 className="about-title">ABOUT <br /> SYSDEVCODE</h2>  
+          <h2 className="about-title">{aboutTitle}</h2>  
           <div style={{ marginTop: '4rem' }} className="about-desc">
             <TextType 
-              text={"We are creative developers that transforms innovative ideas into powerful digital experiences. Out team combines artistic vision with technical expertise to deliver solutions that captivate and convert."}
+              text={aboutDesc}
               typingSpeed={50}
               pauseDuration={30000}
               showCursor={true}

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./header.css";
 import { gsap } from "gsap";
 
-export default function Header({ animate }) {
+export default function Header({ animate, headerTitle }) {
   const navRef = useRef(null);
   const logoRef = useRef(null);
   const btnRef = useRef(null);
@@ -48,7 +48,7 @@ export default function Header({ animate }) {
 
   return (
     <header className="navbar" ref={navRef}>
-      <div className="logo" ref={logoRef}>SysDevCode</div>
+      <div className="logo" ref={logoRef}>{headerTitle}</div>
 
       <ul className="nav-links">
         <li><a ref={addLink} href="#hero">Home</a></li>

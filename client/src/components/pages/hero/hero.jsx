@@ -3,7 +3,7 @@ import "./hero.css";
 import { gsap } from "gsap";
 import Beams from "../effects/beams.jsx"
 
-export default function Hero({ animate }) {
+export default function Hero({ animate , title1, title2, leftcnt, rightcnt}) {
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -39,21 +39,23 @@ export default function Hero({ animate }) {
       </div>
 
       <div className="hero-title-container">
-        <h2 className="hero-title span1" data-text="DIGITAL">DIGITAL</h2>
-        <h2 className="hero-title span2" data-text="VISION">VISION</h2>
+        <h2 className="hero-title span1" data-text={title1}>{title1}</h2>
+        <h2 className="hero-title span2" data-text={title2}>{title2}</h2>
 
         
       </div>
 
 
       <div className="hero-role-container">
-          <div className="hero-role">Where Ideas</div>
-          <div className="hero-role">Meets Impact</div>
+          <div className="hero-role">{rightcnt}</div>
       </div>
 
       <div className="hero-subtext-container">
-      <p className="hero-subtext">We help <br />brands scale <br />using technology.</p>
+      <p className="hero-subtext">{leftcnt}</p>
       </div>
     </section>
   );
 }
+
+// Where Ideas Meets Impact
+// We help <br />brands scale <br />using technology.
