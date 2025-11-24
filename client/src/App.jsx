@@ -9,7 +9,7 @@ import About from "./components/pages/about/about.jsx";
 import Feature from "./components/pages/feature/feature.jsx";
 import Contact from "./components/pages/contact/contact.jsx";
 import ContactPage from "./components/pages/contact/contactpage.jsx";
-
+import Admin from "./Admin.jsx";
 
 export default function App() {
   const [preloaderDone, setPreloaderDone] = useState(false);
@@ -71,6 +71,8 @@ export default function App() {
           <Footer animate={preloaderDone} 
                   footerTitle={content?.footerTitle}
                   footerDesc={content?.footerDesc}/>
+
+          <Admin animate={preloaderDone} />
         </>
       )}
     </>
