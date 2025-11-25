@@ -1,0 +1,102 @@
+@import url("https://api.fontshare.com/v2/css?f[]=ranade@100,200,300,400,600&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=bebas-neue@400&display=swap");
+
+.admin_section{
+    height: auto;
+    color:white;
+    transition: 500ms ease-in;
+}
+.admin_title{
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 30px;
+    font-size:20em;
+    color:rgb(144, 144, 144);
+    margin: 0 !important;
+}
+.admin_form{
+  background-color: rgb(35, 37, 38);
+  font-family: "Ranade", sans-serif;
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  padding: 3rem;
+  max-width: 90%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin_form h2{
+  display: flex;
+  flex-direction: column;
+  color: gold;
+  align-items: center;
+  font-size:2em;
+}
+
+.admin_form label{
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 1%;
+  gap:20px;
+}
+
+.admin_form input,
+.admin_form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8em;
+  font-family: "Renade", sans-serif;
+  background: transparent;
+  border: 1px solid rgba(110, 110, 110, 0.456);
+  padding: 1rem;
+  margin-bottom: 2%;
+}
+
+.admin_form textarea{
+    padding-bottom: 10%;
+}
+.full {
+  grid-column: span 2;
+}
+
+.service_place{
+  display: flex;
+  gap:30px;
+  margin-bottom: 20px;
+}
+
+.feature_place{
+    display: flex;
+  gap:30px;
+  margin-bottom: 20px;
+}
+
+
+.admin_form button{
+    padding:1rem;
+    border-radius: 10px;
+    align-content:center;
+    text-align: center;
+    font-family: "Ranade",sans-serif;
+    font-size: 1em;
+    background-color: transparent;
+    border: 2px solid rgba(110, 110, 110, 0.456);
+    color:white;
+    transition: 200ms ease-in-out;
+}
+
+.admin_form button:hover{
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+}
+
+.submit_button{
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
