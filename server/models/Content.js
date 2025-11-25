@@ -11,7 +11,7 @@ const contentSchema = new mongoose.Schema({
     serviceTitle : String,
     services:[
         {
-            name:String,
+            title:String,
             desc:String
         }
     ],
