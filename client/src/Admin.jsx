@@ -77,6 +77,17 @@ function Admin() {
     });
   };
 
+//Delete services
+  const removeService = (index) => {
+  const newServices = content.services.filter((_, i) => i !== index);
+
+  setContent({
+    ...content,
+    services: newServices
+  });
+};
+
+
 //Change saves
 
 const saveChange =() =>{
@@ -149,8 +160,12 @@ const saveChange =() =>{
               placeholder='Service Description'
               value={service.desc}
               onChange={(e) => updateService(i,"desc", e.target.value)}/>
+
+              <button
+              type="button"
+              className="delete-btn"
+              onClick={() => removeService(i)}>❌</button>
             </div>
-          
           ))}
           <button type="button" onClick={addService}>Add Service</button>
         </div>
