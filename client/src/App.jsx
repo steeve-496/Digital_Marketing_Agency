@@ -20,7 +20,7 @@ export default function App() {
   const [content, setContent] = useState(null);
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/api/content")
+    axios.get("https://digital-marketing-agency-nt47.onrender.com/api/content")
     .then(res => setContent(res.data))
     .catch(err => console.log(err));
   },[content]);

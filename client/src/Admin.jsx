@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import "./app.css"
+import "./App.css"
 import Header_s from './components/pages/header_s/header_s';
 import axios  from 'axios'; 
 
@@ -38,7 +38,7 @@ function Admin() {
   })
 
   useEffect(()=>{
-    axios.get("http://localhost:5000/api/content")
+    axios.get("https://digital-marketing-agency-nt47.onrender.com/api/content")
         .then(res => setContent(res.data))
         .catch(err => console.log(err));
   },[]);
@@ -80,7 +80,7 @@ function Admin() {
 //Change saves
 
 const saveChange =() =>{
-  axios.put("http://localhost:5000/api/content",content)
+  axios.put("https://digital-marketing-agency-nt47.onrender.com/api/content",content)
     .then(()=>alert("✅ Content Updated Successfully"))
     .catch(err =>console.log(err));
 
